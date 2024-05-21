@@ -9,7 +9,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='py-3 my-4 px-4 w-[95%] md:w-[80%] bg-white rounded-3xl text-center shadow-md mx-auto'>
+    <nav className='py-3 my-4 px-4 w-[95%] md:w-[80%] bg-white rounded-full text-center shadow-md mx-auto'>
       <div className='justify-between items-center px-3 pb-1 hidden md:flex'>
         <div className='flex gap-3'>
           <div className='group'>
@@ -79,7 +79,7 @@ export default function Navbar() {
       <ul
         className={
           nav
-            ? 'fixed md:hidden right-0 h-full top-0 w-[100%] bg-white ease-in-out duration-500'
+            ? 'fixed md:hidden right-0 h-full top-0 w-[100%] bg-white ease-in-out duration-500 z-10'
             : 'ease-in-out w-[100%] duration-500 fixed top-0 bottom-0 right-[-100%]'
         }
       >
