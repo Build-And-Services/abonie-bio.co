@@ -1,107 +1,88 @@
-// import './style.css';
-
-import { useEffect, useState } from 'react';
-
 export default function Jumbotron() {
-  const [flipped, setFlipped] = useState(false);
-
-  const handleScroll = () => {
-    const scrollTop = window.pageYOffset;
-    setFlipped(scrollTop % 2 === 0); // Balik gambar setiap kali scrollTop bernilai genap
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   return (
     <header>
-      <div className='grid grid-cols-6 gap-2 place-items-stretch'>
-        <div className='relative'>
+      <div className='flex relative items-center justify-center overflow-hidden max-w-7xl w-full mx-auto'>
+        <div className='container flex-col sm:flex-row md:flex-col lg:flex-row justify-center items-center mx-auto px-6 flex relative py-2 sm:py-10 md:py-3 lg:py-16'>
           <div
-            className='absolute bottom-0 top-0 left-20'
-            style={{
-              transform: flipped ? 'scaleX(-1)' : 'scaleX(1)',
-              transition: 'transform 0.8s ease-in-out ',
-            }}
+            className='sm:w-2/3 lg:w-full flex flex-col relative'
+            data-aos='zoom-out-right'
           >
-            <img
-              width={'100%'}
-              src='/src/assets/images/jumbotron/bio1.jpg'
-              alt=''
-              className='w-[224px] rotate-30 rounded-xl relative top-24'
-            />
-            <img
-              width={'100%'}
-              height={'100%'}
-              src='/src/assets/images/jumbotron/car1.jpg'
-              alt=''
-              className='w-[200px] top-auto left-10 absolute rounded-xl rotate-30'
-            />
-          </div>
-        </div>
-        <div className='flex flex-col gap-3 text-center w-full py-4 md:py-11 xs:pb-0 mt-8 md:mt-24 col-span-4'>
-          <div className='flex flex-col gap-2.5'>
-            <span className='text-lg'>⭐⭐⭐⭐⭐⭐</span>
-            <span className='text-sm md:text-[18px] font-normal'>
-              Easy to use and make you famous
+            <span className='w-20 h-2 bg-gray-800 dark:bg-white mb-12'></span>
+            <h1
+              className='font-bebas-neue uppercase text-6xl sm:text-7xl font-black flex flex-col leading-none text-gray-800 animate-text 
+              bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'
+            >
+              Create your site in
+            </h1>
+            <span className='font-bebas-neue uppercase font-black text-5xl sm:text-6xl text-gray-800'>
+              seconds
             </span>
+            <p className='text-sm sm:text-base text-gray-700'>
+              Create Instant Mobile Webpage to sell your knowledge. Chat, Video
+              Calls, Events, Digital Product. Share it across social media. It’s
+              free, and takes less than a minute. Loved by 500,000+ creators
+            </p>
+            <div className='flex mt-8'>
+              <div>
+                <form className='flex gap-0 relative'>
+                  <div className='absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'></div>
+                  <div className='relative w-[60%]'>
+                    <span className='absolute inset-y-0 flex items-center pl-3 text-gray-900 font-medium'>
+                      bio.co/
+                    </span>
+                    <div className='animate-border inline-block rounded-l-md bg-white bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:400%_400%] p-[2px]'>
+                      <input
+                        type='text'
+                        name='link'
+                        className='pl-16 pr-4 py-3 w-full rounded-l focus:border-none focus:ring-0 focus:outline-none'
+                        placeholder='yourname'
+                      />
+                    </div>
+                  </div>
+                  <div className='relative inline-flex group'>
+                    <div className='absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'></div>
+                    <a
+                      href='#'
+                      className='relative inline-flex items-center justify-center py-3 px-5 text-xs md:text-lg font-semibold text-white transition-all duration-200 bg-gray-900 font-pj rounded-r-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900'
+                      role='button'
+                    >
+                      Claim my site
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <h1
-            className='w-[95%] md:w-[69%] text-5xl md:text-6xl lg:text-8xl font-semibold mb-7 tracking-tight self-center animate-text 
-        bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'
+          <div
+            className='w-full text-center sm:w-1/3 md:w-[80%] lg:w-full relative flex justify-center'
+            data-aos='zoom-in-up'
           >
-            Create your site in seconds
-          </h1>
-          <div className='mx-auto'>
-            <form className='flex gap-0 relative justify-center'>
-              <div className='absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'></div>
-              <div className='relative w-[60%]'>
-                <span className='absolute inset-y-0 flex items-center pl-3 text-gray-900 font-medium'>
-                  bio.co/
-                </span>
-                <div className='animate-border inline-block rounded-l-md bg-white bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-[length:400%_400%] p-[2px]'>
-                  <input
-                    type='text'
-                    name='link'
-                    className='pl-16 pr-4 py-3 w-full rounded-l focus:border-none focus:ring-0 focus:outline-none'
-                    placeholder='yourname'
-                  />
-                </div>
+            <div className='w-full relative overflow-hidden h-[330px] md:h-[500px] p-8'>
+              <div className='z-[3] absolute w-full md:-right-5 lg:-right-28 animate-bounce'>
+                <img
+                  src='https://www.lynk.id/static/assets/imgs/new-index/mid.webp'
+                  loading='eager'
+                  className='delay-1000 w-[80%]'
+                  alt=''
+                />
               </div>
-              <div className='relative inline-flex group'>
-                <div className='absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'></div>
-                <a
-                  href='#'
-                  className='relative inline-flex items-center justify-center py-3 px-5 text-xs md:text-lg font-semibold text-white transition-all duration-200 bg-gray-900 font-pj rounded-r-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900'
-                  role='button'
-                >
-                  Claim my site
-                </a>
+              <div className='z-[2] absolute w-full md:-right-5 lg:-right-28 animate-bounce-reverse'>
+                <img
+                  src='https://www.lynk.id/static/assets/imgs/new-index/front.webp'
+                  loading='eager'
+                  className='delay-1000 w-[80%]'
+                  alt=''
+                />
               </div>
-            </form>
-          </div>
-          <span className='text-sm md:text-[16px] font-normal mt-2 md:mt-5 text-gray-600'>
-            It’s free, and takes less than a minute
-          </span>
-        </div>
-        <div className='relative'>
-          <div className='absolute bottom-0 top-0 right-20'>
-            <img
-              width={'100%'}
-              src='/src/assets/images/jumbotron/bio2.jpg'
-              alt=''
-              className='w-[224px] -rotate-30 rounded-xl relative top-24'
-            />
-            <img
-              width={'100%'}
-              height={'100%'}
-              src='/src/assets/images/jumbotron/car2.jpg'
-              alt=''
-              className='w-[200px] absolute top-auto right-10 -rotate-30 rounded-xl'
-            />
+              <div className='z-[1] w-full absolute md:-right-5 lg:-right-28 animate-bounce'>
+                <img
+                  src='https://www.lynk.id/static/assets/imgs/new-index/back.webp'
+                  loading='eager'
+                  className='delay-1000 w-[80%]'
+                  alt=''
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
