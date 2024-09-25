@@ -15,8 +15,8 @@ export default function Navbar() {
           <div className='group'>
             <a href='#'>
               <img
-                className='w-10 h-10 mx-auto'
-                src='/src/assets/images/logo-abonie.png'
+                className='w-12 h-12 mx-auto'
+                src='/src/assets/images/logo-abonie-new.png'
                 alt='logo-abonie'
               />
             </a>
@@ -24,38 +24,34 @@ export default function Navbar() {
           <div className='group'>
             <a
               href='#'
-              className='flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-900 group-hover:text-pink-600'
+              className='flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-900 group-hover:text-blue-600'
             >
               <span className='block'>
                 <span className='block text-base font-medium'>Features</span>
-                <span className='block w-5 mx-auto h-1 group-hover:bg-pink-600 rounded-full'></span>
+                <span className='block w-5 mx-auto h-1 group-hover:bg-blue-600 rounded-full'></span>
               </span>
             </a>
           </div>
           <div className='group'>
             <a
               href='#'
-              className='flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-900 group-hover:text-pink-600'
+              className='flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-900 group-hover:text-blue-600'
             >
               <span className='block'>
                 <span className='block text-base font-medium'>FAQ</span>
-                <span className='block w-5 mx-auto h-1 group-hover:bg-pink-600 rounded-full'></span>
+                <span className='block w-5 mx-auto h-1 group-hover:bg-blue-600 rounded-full'></span>
               </span>
             </a>
           </div>
         </div>
         <div className='flex gap-3'>
-          <a href='#'>
+          <a
+            href='#'
+            target='_blank'
+          >
             <span className='block'>
-              <button className='middle none center rounded-3xl py-3 px-6 font-sans text-sm font-bold text-pink-600 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'>
-                Login
-              </button>
-            </span>
-          </a>
-          <a href='#'>
-            <span className='block'>
-              <button className='middle none center rounded-3xl bg-pink-600 py-3 px-6 font-sans text-sm font-bold text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'>
-                Signup
+              <button className='middle none center rounded-3xl bg-blue-600 py-3 px-6 font-sans text-sm font-bold text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'>
+                Join Us
               </button>
             </span>
           </a>
@@ -103,10 +99,7 @@ export default function Navbar() {
             FAQ
           </li>
           <li className='text-start text-lg font-semibold p-4 border-b duration-300 hover:text-black cursor-pointer border-gray-200'>
-            <button>Login</button>
-          </li>
-          <li className='text-start text-lg font-semibold p-4 border-b duration-300 hover:text-black cursor-pointer border-gray-200'>
-            <button>Signup</button>
+            <button>Join Us</button>
           </li>
         </div>
       </ul>
